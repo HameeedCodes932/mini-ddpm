@@ -1,0 +1,165 @@
+{
+  "rows": [
+    {
+      "method": "ddpm",
+      "steps": 1000,
+      "samples": 512,
+      "seed": 2026,
+      "grid_images": 64,
+      "grid_selection": "first 64 generated images, no filtering",
+      "seconds_512": 39.82691856700012,
+      "timings_64_seconds": [
+        5.123749688999851,
+        5.218776296999749,
+        5.084675688000061
+      ],
+      "median_64_seconds": 5.123749688999851,
+      "classifier_feature_distance": 30.639728714227203,
+      "mean_classifier_confidence": 0.8358155488967896,
+      "confidence_at_least_0_9_fraction": 0.537109375,
+      "predicted_class_counts": [
+        37,
+        62,
+        49,
+        75,
+        45,
+        36,
+        41,
+        52,
+        50,
+        65
+      ],
+      "normalized_predicted_class_entropy": 0.9882414751247306
+    },
+    {
+      "method": "ddpm",
+      "steps": 200,
+      "samples": 512,
+      "seed": 2026,
+      "grid_images": 64,
+      "grid_selection": "first 64 generated images, no filtering",
+      "seconds_512": 8.177202936999947,
+      "timings_64_seconds": [
+        1.0164813490000597,
+        1.012117668999963,
+        1.0589564970000538
+      ],
+      "median_64_seconds": 1.0164813490000597,
+      "classifier_feature_distance": 36.98165195731053,
+      "mean_classifier_confidence": 0.8372387886047363,
+      "confidence_at_least_0_9_fraction": 0.521484375,
+      "predicted_class_counts": [
+        38,
+        59,
+        44,
+        49,
+        43,
+        40,
+        49,
+        63,
+        58,
+        69
+      ],
+      "normalized_predicted_class_entropy": 0.9918820943495628
+    },
+    {
+      "method": "ddpm",
+      "steps": 50,
+      "samples": 512,
+      "seed": 2026,
+      "grid_images": 64,
+      "grid_selection": "first 64 generated images, no filtering",
+      "seconds_512": 2.0496528029998444,
+      "timings_64_seconds": [
+        0.25738726999998107,
+        0.253169650000018,
+        0.25856810999994195
+      ],
+      "median_64_seconds": 0.25738726999998107,
+      "classifier_feature_distance": 37.89765022028564,
+      "mean_classifier_confidence": 0.8226691484451294,
+      "confidence_at_least_0_9_fraction": 0.4765625,
+      "predicted_class_counts": [
+        30,
+        46,
+        41,
+        66,
+        55,
+        43,
+        29,
+        64,
+        57,
+        81
+      ],
+      "normalized_predicted_class_entropy": 0.9794831624233665
+    },
+    {
+      "method": "ddim",
+      "steps": 50,
+      "samples": 512,
+      "seed": 2026,
+      "grid_images": 64,
+      "grid_selection": "first 64 generated images, no filtering",
+      "seconds_512": 2.0477149549997193,
+      "timings_64_seconds": [
+        0.2693975139995928,
+        0.2564439150000908,
+        0.2664828500001022
+      ],
+      "median_64_seconds": 0.2664828500001022,
+      "classifier_feature_distance": 38.951829035443325,
+      "mean_classifier_confidence": 0.7944616079330444,
+      "confidence_at_least_0_9_fraction": 0.435546875,
+      "predicted_class_counts": [
+        39,
+        50,
+        54,
+        72,
+        47,
+        31,
+        38,
+        55,
+        60,
+        66
+      ],
+      "normalized_predicted_class_entropy": 0.9873388401583084
+    }
+  ],
+  "environment": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu130",
+    "numpy": "2.1.3",
+    "device": "cuda",
+    "hardware": "Tesla T4",
+    "cuda": "13.0",
+    "threads": 2,
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39"
+  },
+  "checkpoint_sha256": "24eee21d7d8c38740b131f236823ad9651ac13dd798d6aab41db111906f8ad89",
+  "sampling": "same trained EMA weights, full-range uniformly spaced original time indices, clipped predicted x0, fixed-small posterior variance",
+  "timing_protocol": "three rotated-order repeats, batch 64, CUDA synchronized, includes RNG and denoising; excludes model loading, plotting, metrics and file I/O",
+  "quality_protocol": "512 fixed-seed unfiltered samples per method; 2048 MNIST-test reference images; 8-bit images persisted; diagnostic classifier features, not standard FID",
+  "real_reference_calibration_distance": 6.666077184757114,
+  "classifier_result": {
+    "epochs": 3,
+    "seed": 2718,
+    "train_images": 60000,
+    "test_images": 10000,
+    "test_accuracy": 0.9809,
+    "features": "64-dimensional penultimate ReLU; not an ImageNet Inception FID",
+    "history": [
+      {
+        "epoch": 1,
+        "training_cross_entropy": 0.4381452401836713
+      },
+      {
+        "epoch": 2,
+        "training_cross_entropy": 0.10784957904020945
+      },
+      {
+        "epoch": 3,
+        "training_cross_entropy": 0.07282689007421335
+      }
+    ]
+  }
+}
